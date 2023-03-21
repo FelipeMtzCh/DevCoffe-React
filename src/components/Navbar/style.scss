@@ -1,0 +1,31 @@
+$white: #F2F2F2;
+$light: #B8B8BF;
+$green: #1A2601;
+$darkBrown: #402C20;
+$ligthBrown: #734E40;
+$black: #0D0D0D;
+
+header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $darkBrown;
+  color: $white;
+
+  .logo {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+  .menu{
+    width: 35px;
+    color: $white;
+    margin: 1rem;
+    cursor: pointer;
+  }
+}

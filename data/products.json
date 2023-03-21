@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "Endulzante",
+        "price": 50000,
+        "description": "Endulzante sabor caramelo",
+        "category": "endulzantes",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "title": "Cafe fuerte",
+        "price": 25000,
+        "description": "Cafe Colcafe concentrado",
+        "category": "cafe",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "title": "Pato de ule",
+        "price": 7000,
+        "description": "Tu compañero ideal de programacion",
+        "category": "accesorios",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "title": "Cafe suave",
+        "price": 45000,
+        "description": "Cafe suave tipo capuccino",
+        "category": "cafe",
+        "image": ""
+    },
+    {
+        "id": 5,
+        "title": "Oster Expresso",
+        "price": 2199000,
+        "description": "Cafetera Oster con molinillo integrado",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 6,
+        "title": "Coffee Home",
+        "price": 190400,
+        "description": "Cafe profesional hecho en casa",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 7,
+        "title": "Kwister",
+        "price": 900000,
+        "description": "maquina de cafe con varita de vapor espumosa",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 8,
+        "title": "Cafe Salento",
+        "price": 80000,
+        "description": "Café Salento es un café especial Colombiano",
+        "category": "cafe",
+        "image": ""
+    },
+    {
+        "id": 9,
+        "title": "Cafetera Francesa",
+        "price": 70000,
+        "description": "Cafetera Francesa clasica",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 10,
+        "title": "Cafetera Italiana",
+        "price": 75000,
+        "description": "Cafetera Italiana clasica",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 11,
+        "title": "Taza Python",
+        "price": 25000,
+        "description": "Taza con impresion de Python",
+        "category": "accesorios",
+        "image": ""
+    },
+    {
+        "id": 12,
+        "title": "Taza HTML",
+        "price": 25000,
+        "description": "Taza con impresion de HTML",
+        "category": "accesorios",
+        "image": ""
+    },
+    {
+        "id": 13,
+        "title": "Taza CSS",
+        "price": 25000,
+        "description": "Taza con impresion de CSS",
+        "category": "accesorios",
+        "image": ""
+    },
+    {
+        "id": 14,
+        "title": "Stevia",
+        "price": 20000,
+        "description": "5 endulzantes Stevia",
+        "category": "endulzantes",
+        "image": ""
+    },
+    {
+        "id": 15,
+        "title": "Jarabe chocolate",
+        "price": 47000,
+        "description": "Endulzante sabor chocolate",
+        "category": "endulzantes",
+        "image": ""
+    },
+    {
+        "id": 16,
+        "title": "Sirope",
+        "price": 55000,
+        "description": "Endulzante tipo sirope",
+        "category": "endulzantes",
+        "image": ""
+    },
+    {
+        "id": 17,
+        "title": "Guanlanday",
+        "price": 55125,
+        "description": "Cafe excelso puro especial",
+        "category": "cafe",
+        "image": ""
+    },
+    {
+        "id": 18,
+        "title": "Cafetto",
+        "price": 70000,
+        "description": "Cafe verde cafetolio",
+        "category": "cafe",
+        "image": ""
+    },
+    {
+        "id": 19,
+        "title": "Espumador",
+        "price": 13000,
+        "description": "Espumador de leche portatil",
+        "category": "maquinas",
+        "image": ""
+    },
+    {
+        "id": 20,
+        "title": "Splenda",
+        "price": 30000,
+        "description": "100 sobres de endulzante",
+        "category": "endulzantes",
+        "image": ""
+    }
+]

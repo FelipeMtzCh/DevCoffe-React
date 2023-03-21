@@ -1,0 +1,41 @@
+$white: #f2f2f2;
+$light: #b8b8bf;
+$green: #1a2601;
+$darkBrown: #402c20;
+$ligthBrown: #734e40;
+$black: #0d0d0d;
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  width: 320px;
+  height: 32px;
+  font-family: "Maven pro";
+  border-radius: 50px;
+  color: $ligthBrown;
+  background-color: $white;
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+  outline-color: transparent;
+
+  &:focus{
+    outline-color: $ligthBrown;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  input{
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  input{
+    width: 700px;
+  }
+}

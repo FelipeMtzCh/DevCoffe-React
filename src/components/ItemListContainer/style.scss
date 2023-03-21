@@ -1,0 +1,77 @@
+$white: #f2f2f2;
+$light: #b8b8bf;
+$green: #1a2601;
+$darkBrown: #402c20;
+$ligthBrown: #734e40;
+$black: #0d0d0d;
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  background-color: $light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  gap: 0.5rem;
+
+  .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: max-content;
+    gap: 0.5rem;
+    padding: 2rem;
+  }
+  .main-title {
+    width: 245px;
+    height: 27px;
+    font-family: "Maven Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    color: $green;
+    margin-top: 10px;
+  }
+
+  .main-container {
+    height: max-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 152px);
+    grid-template-rows: repeat(autofill, 220px);
+    justify-content: center;
+    gap: 22px;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .parent{
+    .main-container {
+      grid-template-columns: repeat(4, 151.52px);
+    }
+    .categories {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .parent{
+    .main-container {
+      grid-template-columns: repeat(5, 151.52px);
+    }
+    .categories {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+}
