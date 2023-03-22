@@ -1,0 +1,22 @@
+$white: #f2f2f2;
+$light: #b8b8bf;
+$green: #1a2601;
+$darkBrown: #402c20;
+$ligthBrown: #734e40;
+$black: #0d0d0d;
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: max-content;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

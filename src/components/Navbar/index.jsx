@@ -16,7 +16,9 @@ const Navbar = () => {
         <Link to="/">
           <img className="logo" src={Logo} alt="Logo" />
         </Link>
-        <CartWidget content="0" />
+        <Link to="/cart">
+          <CartWidget content="0" />
+        </Link>
       </header>
     </div>
   );
