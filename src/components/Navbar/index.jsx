@@ -12,11 +12,12 @@ const Navbar = () => {
         <Link to="/">
           <Button label="Products" />
         </Link>
-        {/* <img className="menu" src={MenuIcon} /> */}
         <Link to="/">
           <img className="logo" src={Logo} alt="Logo" />
         </Link>
-        <CartWidget content="0" />
+        <Link to="/cart">
+          <CartWidget content="0" />
+        </Link>
       </header>
     </div>
   );
