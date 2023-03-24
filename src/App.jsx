@@ -1,11 +1,13 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Footer from "./components/Footer";
-import ItemListContainer from "./components/ItemListContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import ProductDetails from "./components/ProductDetails";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemCartContainer from "./components/ItemCartContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -17,14 +19,18 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <main>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer products={products} />} />
-        <Route path="/:id" element={<ProductDetails />} />
-      </Routes>
-      <Footer />
-    </main>
+    <div>
+      {/* <BrowserRouter> */}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer products={products} />} />
+          <Route path="/products/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<ItemCartContainer />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      {/* </BrowserRouter> */}
+    </div>
   );
 }
 

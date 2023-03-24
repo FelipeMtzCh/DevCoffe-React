@@ -1,12 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../Button";
 import Properties from "../Properties";
 import SearchBar from "../SearchBar";
 import "./style.scss";
 
-const ProductDetails = () => {
+const ItemDetailContainer = () => {
   const { id } = useParams();
   return (
     <div className="container">
@@ -37,4 +35,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ItemDetailContainer;
