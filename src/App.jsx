@@ -20,16 +20,14 @@ function App() {
   }, []);
   return (
     <div>
-      {/* <BrowserRouter> */}
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer products={products} />} />
-          <Route path="/products/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<ItemCartContainer />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      {/* </BrowserRouter> */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<ItemListContainer products={products} />} />
+        <Route path="/products/:id" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<ItemCartContainer />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
