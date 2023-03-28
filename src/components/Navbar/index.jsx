@@ -12,7 +12,7 @@ const Navbar = () => {
           <Button label="Products" />
         </Link>
         <Link to="/">
-          {/* <img className="logo" src="../../assets/img/Logo.png" alt="Logo" /> */}
+          <img className="logo" src="../../assets/img/Logo.png" alt="Logo" />
         </Link>
         <Link to="/cart">
           <CartWidget content="0" />
