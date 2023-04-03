@@ -8,9 +8,13 @@ import "./style.scss";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
   const Add = () => setCount((count) => count + 1);
   const Sus = () => setCount((count) => count - 1);
+  const Res = () => setCount((count) => count - count);
+  if(count < 0){
+    count = 0;
+  }
   const { id } = useParams();
 
   useEffect(() => {
@@ -40,7 +44,7 @@ const ItemDetailContainer = () => {
         <span className="description">{product.description}</span>
         <span className="price">${product.price}</span>
         <div className="cart-section">
-          <Button label="Agregar al carrito" />
+          <Button label="Agregar al carrito" click={Res}/>
           <Button label="+" click={Add} />
           <span className="">{count}</span>
           <Button label="-" click={Sus} />
