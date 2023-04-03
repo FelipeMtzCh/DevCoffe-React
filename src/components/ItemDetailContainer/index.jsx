@@ -6,9 +6,21 @@ import Properties from "../Properties";
 import SearchBar from "../SearchBar";
 import "./style.scss";
 
-const ItemDetailContainer = ({ products }) => {
+const ItemDetailContainer = () => {
+  const [product, setProduct] = useState({});
+  const [count, setCount] = useState(0);
+  const Add = () => setCount((count) => count + 1);
+  const Sus = () => setCount((count) => count - 1);
   const { id } = useParams();
-  const product = products.find((product) => product.id === parseInt(id));
+
+  useEffect(() => {
+    axios
+      .get("https://mocki.io/v1/8b6dffa2-7851-4795-8826-1f0f3f35f435")
+      .then((res) =>
+        setProduct(res.data.find((item) => item.id === parseInt(id)))
+      )
+      .catch((err) => console.log(err));
+  }, [id]);
   return (
     <div className="container">
       <div className="searchbar">
@@ -27,7 +39,12 @@ const ItemDetailContainer = ({ products }) => {
         <span className="title">{product.title}</span>
         <span className="description">{product.description}</span>
         <span className="price">${product.price}</span>
-        <Button label="Agregar al carrito" />
+        <div className="cart-section">
+          <Button label="Agregar al carrito" />
+          <Button label="+" click={Add} />
+          <span className="">{count}</span>
+          <Button label="-" click={Sus} />
+        </div>
       </div>
     </div>
   );

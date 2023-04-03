@@ -9,8 +9,8 @@ $black: #0d0d0d;
 .container-products {
   transition: 0.3s ease-in-out;
   position: relative;
-  width: 152px;
-  height: 220px;
+  width: 170px;
+  height: 250px;
   background: $white;
   border-radius: 10.5px;
 
@@ -20,9 +20,9 @@ $black: #0d0d0d;
 
   .product-image {
     position: absolute;
-    width: 123px;
-    height: 123px;
-    left: 14px;
+    width: 133px;
+    height: 133px;
+    left: 20px;
     top: 13.8px;
     background: $green;
     border-radius: 5px;
@@ -31,9 +31,8 @@ $black: #0d0d0d;
   .name {
     position: absolute;
     width: max-content;
-    height: 16px;
-    left: 14px;
-    top: 140px;
+    left: 19px;
+    top: 150px;
     font-family: "Maven Pro";
     font-style: normal;
     font-weight: 700;
@@ -47,9 +46,8 @@ $black: #0d0d0d;
   .description {
     position: absolute;
     width: 124px;
-    height: 13px;
-    left: 14px;
-    top: 165px;
+    left: 19px;
+    top: 174px;
     font-family: "Maven Pro";
     font-style: normal;
     font-weight: 400;
@@ -63,9 +61,8 @@ $black: #0d0d0d;
   .price {
     position: absolute;
     width: 32px;
-    height: 16px;
     left: 15px;
-    top: 193px;
+    bottom: 12px;
     font-family: "Maven Pro";
     font-style: normal;
     font-weight: 700;
@@ -81,7 +78,7 @@ $black: #0d0d0d;
     padding: 8px;
     max-height: 25px;
     right: 15px;
-    bottom: 8px;
+    bottom: -3px;
     background: $green;
     color: $white;
     border-radius: 5px;

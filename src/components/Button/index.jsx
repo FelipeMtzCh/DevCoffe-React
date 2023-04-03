@@ -1,9 +1,12 @@
+import { useState } from "react";
 import "./style.scss";
 
-const Button = ({ label }) => {
+const Button = ({ label, click }) => {
   return (
     <div>
-      <button>{label}</button>
+      <button type="button" onClick={click}>
+        {label}
+      </button>
     </div>
   );
 };

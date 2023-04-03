@@ -27,7 +27,6 @@ $black: #0d0d0d;
     width: 100%;
     height: max-content;
     gap: 0.5rem;
-    padding: 2rem;
   }
   .main-title {
     width: 245px;
@@ -38,7 +37,6 @@ $black: #0d0d0d;
     font-size: 23px;
     line-height: 27px;
     color: $green;
-    margin-top: 10px;
   }
 
   .main-container {
@@ -48,8 +46,8 @@ $black: #0d0d0d;
     grid-template-columns: repeat(2, 152px);
     grid-template-rows: repeat(autofill, 220px);
     justify-content: center;
-    gap: 22px;
-    padding: 2rem;
+    gap: 30px;
+    padding: 15px;
   }
 }
 
