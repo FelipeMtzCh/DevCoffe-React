@@ -23,6 +23,7 @@ button{
     cursor: pointer;
     font-family: "Maven Pro", sans-serif;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 12px;
     &:hover{
         background-color: $green;
         color: $white;

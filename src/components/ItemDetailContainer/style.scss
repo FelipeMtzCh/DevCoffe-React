@@ -22,15 +22,12 @@ $black: #0d0d0d;
   align-items: center;
   justify-content: center;
 
-  .searchbar{
-    padding-top: 25px;
-  }
-
   .image {
     height: 246px;
     width: 246px;
     background-color: $green;
     border-radius: 5px;
+    margin-top: 20px;
   }
 
   .slider {
@@ -39,6 +36,7 @@ $black: #0d0d0d;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin: 12px;
     .item {
       height: 12px;
       width: 12px;
@@ -61,14 +59,15 @@ $black: #0d0d0d;
       font-size: 21px;
       font-weight: 700;
       color: $green;
+      margin-top: 12px;
     }
     .description {
       font-size: 18px;
       font-weight: 600;
-      color: $darkBrown;
+      color: $black;
     }
     .price {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 900;
       color: $green;
     }

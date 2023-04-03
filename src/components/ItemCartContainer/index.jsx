@@ -1,21 +1,21 @@
 import ProductCart from "../ProductCart";
 import "./style.scss";
 
-const ItemCartContainer = () => {
+const ItemCartContainer = ({products}) => {
   return (
-    <div className="container">
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
-      <ProductCart/>
+    <div>
+      <div className="container">
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+        <ProductCart />
+      </div>
     </div>
   );
 };

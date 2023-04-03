@@ -1,5 +1,5 @@
 import "./style.scss";
-import Logo from "../../assets/img/Logo.png";
+import Logo from "../../assets/img/logo_75x75.png";
 import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 import Button from "../Button";
@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <header>
         <Link to="/">
-          <Button label="Products" />
+          <Button label="Inicio" />
         </Link>
         <Link to="/">
           <img className="logo" src={Logo} alt="Logo" />

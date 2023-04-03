@@ -1,7 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemCartContainer from "./components/ItemCartContainer";
@@ -23,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<ItemListContainer products={products} />} />
-        <Route path="/products/:id" element={<ItemDetailContainer />} />
+        <Route path="/:id" element={<ItemDetailContainer products={products} />} />
         <Route path="/cart" element={<ItemCartContainer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
