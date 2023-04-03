@@ -1,5 +1,5 @@
 import "./style.scss";
-import Logo from "../../assets/img/logo_75x75.png";
+import Logo from "../../assets/img/Logo.png";
 import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 import Button from "../Button";
