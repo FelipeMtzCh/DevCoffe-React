@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("../data/products.json")
+      .get("https://mocki.io/v1/8b6dffa2-7851-4795-8826-1f0f3f35f435")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);
