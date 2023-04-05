@@ -9,6 +9,10 @@ import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import FormCheckout from "./components/FormCheckout";
 import CartProvider from "./contexts/CartContext";
+import { useEffect, useState } from "react";
+import db from "../db/firebase-config.js";
+import { collection, getDocs } from "@firebase/firestore";
+import AdderDb from "./components/AdderDb";
 
 function App() {
   return (
@@ -23,6 +27,7 @@ function App() {
           <Route path="/cart" element={<ItemCartContainer />} />
           <Route path="/cart/checkout" element={<FormCheckout />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/admin" element={<AdderDb />} />
         </Routes>
         <Footer />
       </CartProvider>

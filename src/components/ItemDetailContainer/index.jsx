@@ -1,16 +1,19 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { CartContext } from "../../contexts/CartContext";
+import { toast } from "react-hot-toast";
+import { collection, getDocs } from "@firebase/firestore";
+import db from "../../../db/firebase-config.js"
 import Button from "../Button";
 import Properties from "../Properties";
 import SearchBar from "../SearchBar";
 import "./style.scss";
-import { CartContext } from "../../contexts/CartContext";
-import { toast } from "react-hot-toast";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const productsRef = collection(db, "products");
   let [count, setCount] = useState(1);
+  const { id } = useParams();
   const { addToCart } = useContext(CartContext);
   const Add = () => setCount((count) => count + 1);
   const Sus = () => setCount((count) => count - 1);
@@ -22,16 +25,20 @@ const ItemDetailContainer = () => {
   if (count < 1) {
     setCount(1);
   }
-  const { id } = useParams();
 
+  const fetchProducts = async () => {
+    const productsCollection = await getDocs(productsRef);
+    const res = productsCollection.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    setProduct(res.find((product) => product.id === id));
+  };
   useEffect(() => {
-    axios
-      .get("https://mocki.io/v1/8b6dffa2-7851-4795-8826-1f0f3f35f435")
-      .then((res) =>
-        setProduct(res.data.find((item) => item.id === parseInt(id)))
-      )
-      .catch((err) => console.log(err));
+    fetchProducts();
   }, [id]);
+  console.log(product);
+
   return (
     <div className="container-detail">
       <div className="searchbar">
