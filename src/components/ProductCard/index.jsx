@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
           <p className="name">{product.title}</p>
           <p className="description">{product.description}</p>
           <p className="price">${product.price}</p>
-          <button className="btn-add-cart">Agregar</button>
+          {/* <button className="btn-addcart">Agregar</button> */}
         </div>
       </div>
     </Link>

@@ -1,19 +1,26 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Button from "../Button";
 import Properties from "../Properties";
 import SearchBar from "../SearchBar";
 import "./style.scss";
+import { CartContext } from "../../contexts/CartContext";
+import { toast } from "react-hot-toast";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  let [count, setCount] = useState(0);
+  let [count, setCount] = useState(1);
+  const { addToCart } = useContext(CartContext);
   const Add = () => setCount((count) => count + 1);
   const Sus = () => setCount((count) => count - 1);
-  const Res = () => setCount((count) => count - count);
-  if(count < 0){
-    count = 0;
+  const Res = () => {
+    toast.success("Producto agregado al carrito!!");
+    addToCart(count, product);
+    setCount(0);
+  };
+  if (count < 1) {
+    setCount(1);
   }
   const { id } = useParams();
 
@@ -26,7 +33,7 @@ const ItemDetailContainer = () => {
       .catch((err) => console.log(err));
   }, [id]);
   return (
-    <div className="container">
+    <div className="container-detail">
       <div className="searchbar">
         <SearchBar />
       </div>
@@ -44,10 +51,10 @@ const ItemDetailContainer = () => {
         <span className="description">{product.description}</span>
         <span className="price">${product.price}</span>
         <div className="cart-section">
-          <Button label="Agregar al carrito" click={Res}/>
-          <Button label="+" click={Add} />
-          <span className="">{count}</span>
-          <Button label="-" click={Sus} />
+          <Button label="Agregar al carrito" size="small" click={Res} />
+          <Button label="+" size="medium" click={Add} />
+          <span className="count">{count}</span>
+          <Button label="-" size="medium" click={Sus} />
         </div>
       </div>
     </div>

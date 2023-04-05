@@ -9,7 +9,7 @@ $black: #0d0d0d;
 .container-products {
   transition: 0.3s ease-in-out;
   position: relative;
-  width: 170px;
+  width: 160px;
   height: 250px;
   background: $white;
   border-radius: 10.5px;
@@ -22,7 +22,7 @@ $black: #0d0d0d;
     position: absolute;
     width: 133px;
     height: 133px;
-    left: 20px;
+    left: 15px;
     top: 13.8px;
     background: $green;
     border-radius: 5px;
@@ -73,12 +73,12 @@ $black: #0d0d0d;
     color: $green;
   }
 
-  .btn-add-cart {
+  .btn-addcart {
     position: absolute;
-    padding: 8px;
+    padding: 7px;
     max-height: 25px;
     right: 15px;
-    bottom: -3px;
+    bottom: 7px;
     background: $green;
     color: $white;
     border-radius: 5px;

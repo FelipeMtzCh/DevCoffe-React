@@ -1,10 +1,10 @@
+import { Link, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Button from "../Button";
 import ProductCard from "../ProductCard";
 import SearchBar from "../SearchBar";
 import "./style.scss";
-import { Link, useParams } from "react-router-dom";
-import {useState, useEffect} from 'react';
-import axios from "axios";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -13,13 +13,15 @@ const ItemListContainer = () => {
   useEffect(() => {
     axios
       .get("https://mocki.io/v1/8b6dffa2-7851-4795-8826-1f0f3f35f435")
-      .then((res) =>{
-        if(category){
-          setProducts(res.data.filter((product)=> product.category === category))
-        }else{
-          setProducts(res.data)
+      .then((res) => {
+        if (category) {
+          setProducts(
+            res.data.filter((product) => product.category === category)
+          );
+        } else {
+          setProducts(res.data);
         }
-      } )
+      })
       .catch((err) => console.log(err));
   }, [category]);
 

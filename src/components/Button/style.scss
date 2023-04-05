@@ -12,7 +12,7 @@ $black: #0d0d0d;
     box-sizing: border-box;
 }
 
-button{
+.btn{
     background-color: $white;
     border: none;
     border-radius: 5px;
@@ -38,4 +38,16 @@ button{
         color: $black;
         cursor: not-allowed;
     }
+}
+
+.small{
+    font-size: 14px;
+}
+
+.medium{
+    font-size: 18px;
+}
+
+.large{
+    font-size: 22px;
 }

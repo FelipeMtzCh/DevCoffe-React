@@ -23,7 +23,7 @@ $black: #0d0d0d;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     height: max-content;
     gap: 0.5rem;
@@ -46,8 +46,8 @@ $black: #0d0d0d;
     grid-template-columns: repeat(2, 152px);
     grid-template-rows: repeat(autofill, 220px);
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
+    gap: 22px;
+    padding-bottom: 12px;
   }
 }
 

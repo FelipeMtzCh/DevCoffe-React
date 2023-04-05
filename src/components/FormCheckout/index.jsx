@@ -1,0 +1,59 @@
+import { toast } from "react-hot-toast";
+import "./style.scss";
+
+const FormCheckout = () => {
+  function User(e) {
+    this.nombre = e.target.fullname.value;
+    this.email = e.target.email2.value;
+    this.codigo = e.target.postalCode.value;
+  }
+
+  const handleSubmit = (e) => {
+    if (e.target.email1.value != "" || e.target.email2.value != "") {
+      if (e.target.email1.value == e.target.email2.value) {
+        e.preventDefault();
+        const dataForm = new User(e);
+        console.log(dataForm);
+        toast.success("Datos guardados exitosamente!!");
+        toast("Gracias por tu compra!");
+        e.target.fullname.value = "";
+        e.target.email1.value = "";
+        e.target.email2.value = "";
+        e.target.postalCode.value = "";
+      } else {
+        e.preventDefault();
+        toast.error("Los email no coinciden!");
+      }
+    } else {
+      e.preventDefault();
+      toast.error("Los campos email no pueden estar vacios!");
+    }
+  };
+  return (
+    <div className="form-checkout">
+      <h1>Formulario de pago</h1>
+      <h3>Llene los siguientes datos para completar su orden</h3>
+      <form onSubmit={handleSubmit}>
+        <div className="input-block">
+          <label>Nombre completo</label>
+          <input type="text" name="fullname" />
+        </div>
+        <div className="input-block">
+          <label>Email</label>
+          <input type="email" name="email1" />
+        </div>
+        <div className="input-block">
+          <label>Confirmar Email</label>
+          <input type="email" name="email2" />
+        </div>
+        <div className="input-block">
+          <label>Codigo Postal</label>
+          <input type="text" name="postalCode" />
+        </div>
+        <button className="btn-finish" type="submit">Finalizar compra</button>
+      </form>
+    </div>
+  );
+};
+
+export default FormCheckout;
